@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 const express = require('express');
 const FormData = require('form-data');
 const axios = require('axios');
@@ -8,7 +10,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 
-const AUTENTIQUE_TOKEN = 'a8dadaf475c4c6c1360427c8e0c6dc89ee5895b13081d752d335efa78cd7df00';
+const AUTENTIQUE_TOKEN = process.env.AUTENTIQUE_TOKEN;
 
 app.post('/criar-termo', async (req, res) => {
   try {

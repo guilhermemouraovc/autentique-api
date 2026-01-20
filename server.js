@@ -9,6 +9,7 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors());
+app.use(express.static('public'));
 
 const AUTENTIQUE_TOKEN = process.env.AUTENTIQUE_TOKEN;
 

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Gerar Termo de Autorização</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <main class="container">
+    <header class="header">
+      <h1>Gerar termo de autorização</h1>
+      <p>Preencha os dados abaixo e gere o link de assinatura.</p>
+    </header>
+
+    <form id="termo-form" class="card">
+      <section class="grid">
+        <label class="field">
+          <span>Nome do titular</span>
+          <input name="nome_titular" required placeholder="João Silva" />
+        </label>
+        <label class="field">
+          <span>CPF do titular</span>
+          <input name="cpf_titular" required placeholder="123.456.789-00" />
+        </label>
+        <label class="field">
+          <span>RG do titular</span>
+          <input name="rg_titular" required placeholder="12.345.678-9" />
+        </label>
+        <label class="field">
+          <span>Últimos dígitos do cartão</span>
+          <input name="ultimos_digitos" required placeholder="1234" />
+        </label>
+        <label class="field">
+          <span>Instituição do cartão</span>
+          <input name="instituicao_cartao" required placeholder="Banco do Brasil" />
+        </label>
+        <label class="field">
+          <span>Valor da transação</span>
+          <input name="valor_transacao" required placeholder="150,00" />
+        </label>
+        <label class="field">
+          <span>Local e data</span>
+          <input name="local_data" required placeholder="Salvador, 20 de Janeiro de 2026" />
+        </label>
+        <label class="field">
+          <span>Data da natureza</span>
+          <input name="data_natureza" required placeholder="20/01/2026" />
+        </label>
+        <label class="field">
+          <span>Nome do beneficiário</span>
+          <input name="nome_beneficiario" required placeholder="Maria Santos" />
+        </label>
+        <label class="field">
+          <span>CPF do beneficiário</span>
+          <input name="cpf_beneficiario" required placeholder="987.654.321-00" />
+        </label>
+        <label class="field field-full">
+          <span>Evento</span>
+          <input name="evento" required placeholder="Show do Ivete Sangalo" />
+        </label>
+      </section>
+
+      <div class="actions">
+        <button type="submit" id="submit-btn">Gerar termo</button>
+        <button type="button" id="fill-btn" class="ghost">Preencher exemplo</button>
+      </div>
+    </form>
+
+    <section class="card result" id="result-card" hidden>
+      <h2>Resultado</h2>
+      <div id="result-content"></div>
+    </section>
+  </main>
+
+  <script src="/app.js"></script>
+</body>
+</html>
